@@ -22,45 +22,62 @@ body, html {
   position: fixed;
   bottom: 3%;
   right:0;
-}
 
-.lilTitle{;
-  font-family: "Lucida Handwriting", serif;
-  color: #282c34;
-  font-weight: bold;
-  text-align: right;
-  padding-right: 30px;
-  float: right;
-  position: fixed;
-  bottom: 0;
-  right:0;
+  h5{;
+    font-family: "Lucida Handwriting", serif;
+    color: #282c34;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 30px;
+    float: right;
+    position: fixed;
+    bottom: 0;
+    right:0;
+  }
 }
 
 .timerPomodoro{
   position: center;
-  background-color: rgba(45, 45, 45, 0.41);
+  background-color: rgba(45, 45, 45, 0.2);
   margin-top: 10%;
-  margin-left: 25%;
-  margin-right: 25%;
-  height: 55%;
-  border-radius: 10px;
+  margin-left: 30%;
+  margin-right: 30%;
+  min-height: 40%;
+  border-radius: 15px;
+  font-family: "Book Antiqua", serif;
    button{
     background-color: rgba(0,0,0,0);
-    border: 5px #d9d9d9 solid;
+    border: 5px #f5eded solid;
     border-radius: 20px;
-    color: #d9d9d9;
+    color: #f5eded;
     padding-left: 15px;
     padding-right: 15px;
     font-size: 5vmin;
-    font-family: "Comic Sans MS", serif;
      margin: 15px;
    }
 
   h1{
     font-size: 16vmin;
     font-weight: bold;
-    font-family: "Comic Sans MS", serif;
+    font-family: "Book Antiqua", serif;
     margin-top: 15px;
   }
+
+  p{
+   font-size: 20px;
+   color: #ceeacd;
+   font-family: "Lucida Calligraphy", serif;
+  }
 }
+
+.settings{
+  margin: 15px;
+  background-color: rgba(0,0,0,0);
+  border: 0px;
+  font-size: 30px;
+  left: 0;
+  position: fixed;
+}
+
+
 
