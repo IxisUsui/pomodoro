@@ -1,0 +1,57 @@
+body, html {
+    height: 100%;
+}
+
+.backgroundImage{
+    background-image: url("https://wallpapercave.com/wp/aWaXW72.jpg");
+    background-size: cover;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.titlePomodoro{
+    margin-top: 10px;
+    margin-left:20px;
+    text-align: left;
+    font-family: "Lucida Handwriting", serif;
+    color: aliceblue;
+    font-weight: lighter;
+}
+
+.lilTitle{
+    margin-left:20%;
+    text-align: left;
+    font-family: "Lucida Handwriting", serif;
+    color: #282c34;
+    font-weight: bold;
+}
+
+.timerPomodoro{
+    position: center;
+    background-color: rgba(45, 45, 45, 0.71);
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 7%;
+    margin-bottom: 30%;
+    height: 50%;
+    border-radius: 10px;
+    & .button{
+        color:pink;
+      }
+}
+
+.buttonPomodoro{
+    background-color: rgba(0,0,0,0);
+    border: 2px white solid;
+    border-radius: 10px;
+    color: white;
+    margin: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 200%;
+
+}
