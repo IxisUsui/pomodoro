@@ -1,0 +1,31 @@
+.soundContainer{
+  width: 40%;
+  margin: 10% 3% 25%;
+  font-family: "Book Antiqua", serif;
+  max-width: 20%;
+  height: calc(100% - 400px);
+
+  .flex-column{
+    display: grid;
+  }
+  h3{
+    color: #735646;
+    padding: 5%;
+    font-size: 4vmin;
+    background-color: rgba(241, 168, 87, 0.22);
+    border-radius: 10px;
+    font-weight: bold;
+  }
+  button{
+    color: #f1a857;
+    padding: 4%;
+    font-size: 3vmin;
+    border: 0px;
+    background-color: rgba(241, 168, 87, 0.22);
+    font-weight: bold;
+  }
+  button:focus:not(:focus-visible) {
+    color: #735646;
+    background-color: rgba(176, 189, 144, 0.25);
+  }
+}

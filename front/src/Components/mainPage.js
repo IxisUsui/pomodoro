@@ -1,23 +1,26 @@
 import React from 'react';
 import "../style/main.css";
-import {GrMore} from "react-icons/gr";
 import SoundCorner from "./soundCorner";
+import ChatCorner from "./chatCorner";
 const MainPage = () => {
     return (
         <div>
-            <div className="backgroundImage">
-                <SoundCorner></SoundCorner>
-                <button id="settings" className="settings"><GrMore/></button>
-                <div className="timerPomodoro">
-                    <button>Long</button>
-                    <button>Short</button>
-                    <button>Break</button>
-                    <h1>15:00</h1>
-                    <p id="lilText">Don't give up!</p>
-            </div>
-                <div className="titlePomodoro">
-                    <h1>PomodoroWithMe</h1>
-                    <h5>by Ixis</h5>
+                <div className="backgroundImage">
+                    <div className="flexParent">
+                    <ChatCorner></ChatCorner>
+                    <button id="settings" className="settings"><pre>✦✦✦</pre>	</button>
+                    <div className="timerPomodoro">
+                        <button>Long</button>
+                        <button>Short</button>
+                        <button>Break</button>
+                        <h1>15:00</h1>
+                        <p id="lilText">Don't give up!</p>
+                    </div>
+                        <SoundCorner></SoundCorner>
+                    <div className="titlePomodoro">
+                        <h5>PomodoroWithMe</h5>
+                        <p>by Ixis</p>
+                    </div>
                 </div>
             </div>
 

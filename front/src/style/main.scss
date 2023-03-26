@@ -2,8 +2,17 @@ body, html {
   height: 100%;
 }
 
+
+.flexParent{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  justify-content:space-between;
+}
+
 .backgroundImage{
-  background-image: url("https://wallpapercave.com/wp/aWaXW72.jpg");
+  background-image: url("https://marketplace.canva.com/EAFMZO25Fds/1/0/1600w/canva-green-playful-frog-desktop-wallpaper-0uuRld0-IIg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -13,54 +22,63 @@ body, html {
   margin: 0;
 }
 
+
 .titlePomodoro{
   font-family: "Lucida Handwriting", serif;
-  color: aliceblue;
+  color: #f1a857;
   font-weight: lighter;
   text-align: right;
   padding-right: 20px;
   position: fixed;
   bottom: 3%;
-  right:0;
+  left:0;
 
-  h5{;
+  p{;
     font-family: "Lucida Handwriting", serif;
-    color: #282c34;
-    font-weight: bold;
+    color: #735646;
     text-align: right;
     padding-right: 30px;
     float: right;
     position: fixed;
+    padding-top: 2px;
     bottom: 0;
-    right:0;
+    left:0;
   }
 }
 
 .timerPomodoro{
   position: center;
-  background-color: rgba(45, 45, 45, 0.2);
-  margin-top: 10%;
-  margin-left: 30%;
-  margin-right: 30%;
+  background-color: rgba(176, 189, 144, 0.25);
+  margin: auto;
   min-height: 40%;
+  min-width:40%;
   border-radius: 15px;
+  flex-grow: 3;
   font-family: "Book Antiqua", serif;
+  color: #735646;
    button{
     background-color: rgba(0,0,0,0);
-    border: 5px #f5eded solid;
-    border-radius: 20px;
-    color: #f5eded;
+    border: 3px #f1a857 solid;
+    border-radius: 30px;
+    color: #f1a857;
     padding-left: 15px;
     padding-right: 15px;
     font-size: 5vmin;
      margin: 15px;
    }
 
+  button:focus:not(:focus-visible) {
+    color: #5a8a64;
+    border: 3px #5a8a64 solid;
+    background-color: #efc99e;
+  }
+
   h1{
-    font-size: 16vmin;
+    font-size: min(18vmax,180px);
+
     font-weight: bold;
     font-family: "Book Antiqua", serif;
-    margin-top: 15px;
+    margin: 0;
   }
 
   p{
@@ -74,9 +92,10 @@ body, html {
   margin: 15px;
   background-color: rgba(0,0,0,0);
   border: 0px;
-  font-size: 30px;
-  left: 0;
+  font-size: 20px;
+  right: 0;
   position: fixed;
+  color: #735646;
 }
 
 
