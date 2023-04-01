@@ -1,8 +1,16 @@
-import React from 'react';
+import * as React from 'react'
 import "../style/main.css";
-import SoundCorner from "./soundCorner";
-import ChatCorner from "./chatCorner";
+// @ts-ignore
+import ChatCorner from "./chatCorner.tsx";
+import {useState} from "react";
+// @ts-ignore
+import SoundCorner from "./soundCorner.tsx";
+
+
+
 const MainPage = () => {
+    const [isSoundCornerActive, setIsSoundCornerActive] = useState<boolean>(false);
+
     return (
         <div>
                 <div className="backgroundImage">

@@ -56,8 +56,8 @@ body, html {
 }
 .timerPomodoro button {
   background-color: rgba(0, 0, 0, 0);
-  border: 3px #f1a857 solid;
-  border-radius: 30px;
+  border: 4px #f1a857 solid;
+  border-radius: 40px;
   color: #f1a857;
   padding-left: 15px;
   padding-right: 15px;
@@ -66,8 +66,8 @@ body, html {
 }
 .timerPomodoro button:focus:not(:focus-visible) {
   color: #5a8a64;
-  border: 3px #5a8a64 solid;
-  background-color: #efc99e;
+  border: 4px #5a8a64 solid;
+  background-color: #cee9be;
 }
 .timerPomodoro h1 {
   font-size: min(18vmax, 180px);
