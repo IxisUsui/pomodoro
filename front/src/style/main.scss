@@ -3,13 +3,7 @@ body, html {
 }
 
 
-.flexParent{
-  display: flex;
-  flex-direction: row;
-  height: 100%;
-  width: 100%;
-  justify-content:space-between;
-}
+
 
 .backgroundImage{
   background-image: url("https://marketplace.canva.com/EAFMZO25Fds/1/0/1600w/canva-green-playful-frog-desktop-wallpaper-0uuRld0-IIg.jpg");
@@ -20,6 +14,72 @@ body, html {
   height: 100%;
   width: 100%;
   margin: 0;
+}
+
+
+.buttonStyle{
+  font-family: "Book Antiqua", serif;
+  background-color: #fbeee0;
+  border: 2px solid #735646;
+  border-radius: 30px;
+  box-shadow: #735646 4px 4px 0 0;
+  color: #735646;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 2vmax;
+  padding: 0 10px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.buttonStyle:hover {
+  background-color: #fff;
+}
+
+.buttonStyle:active {
+  box-shadow: #735646 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .buttonStyle {
+    min-width: 100px;
+    padding: 0 2vmax;
+  }
+}
+
+.activeBtn {
+  color: rgba(115, 86, 70, 0.56);
+  border: 1px rgba(115, 86, 70, 0.56) solid;
+  background-color: rgba(251, 238, 224, 0.56);
+}
+
+.topBar{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin: 1% 10% 0;
+    .settings {
+      background-color: rgba(0, 0, 0, 0);
+      border: 0;
+      font-size: 20px;
+      margin-right: 1%;
+      right: 0;
+      position: fixed;
+      color: #735646;
+    }
+
+  //button:focus:not(:focus-visible) {
+  //  color: rgba(115, 86, 70, 0.56);
+  //  border: 1px rgba(115, 86, 70, 0.56) solid;
+  //  background-color: rgba(251, 238, 224, 0.56);
+  //}
+
 }
 
 
@@ -45,58 +105,56 @@ body, html {
     left:0;
   }
 }
-
-.timerPomodoro{
+.flexParent{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  justify-content:center;
+  gap: 30px;
+.timerPomodoro {
+  align-self: center;
   position: center;
+  margin-top: 7%;
+  margin-bottom: 18%;
   background-color: rgba(176, 189, 144, 0.25);
-  margin: auto;
-  min-height: 40%;
-  min-width:40%;
-  border-radius: 15px;
+  max-height: 60%;
+  max-width: 45%;
+  border-radius: 25px;
   flex-grow: 3;
   font-family: "Book Antiqua", serif;
   color: #735646;
-   button{
-    background-color: rgba(0,0,0,0);
-    border: 4px #f1a857 solid;
-    border-radius: 40px;
-    color: #f1a857;
+
+  button {
     padding-left: 15px;
     padding-right: 15px;
     font-size: 5vmin;
     margin: 15px;
-   }
+    flex-wrap: nowrap;
+  }
 
   button:focus:not(:focus-visible) {
     color: #5a8a64;
-    border: 4px #5a8a64 solid;
+    border: 1px #5a8a64 solid;
     background-color: #cee9be;
   }
 
-  h1{
-    font-size: min(18vmax,180px);
+  h1 {
+    font-size: min(18vmax, 180px);
 
     font-weight: bold;
     font-family: "Book Antiqua", serif;
     margin: 0;
   }
 
-  p{
-   font-size: 20px;
-   color: #ceeacd;
-   font-family: "Lucida Calligraphy", serif;
+  p {
+    font-size: 20px;
+    color: #ceeacd;
+    font-family: "Lucida Calligraphy", serif;
   }
 }
-
-.settings{
-  margin: 15px;
-  background-color: rgba(0,0,0,0);
-  border: 0px;
-  font-size: 20px;
-  right: 0;
-  position: fixed;
-  color: #735646;
 }
+
 
 
 
