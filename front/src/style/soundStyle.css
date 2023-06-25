@@ -1,8 +1,7 @@
 .soundContainer {
-  width: 40%;
-  margin: 5% 3% 25%;
+  margin: 5% 7% 20%;
   font-family: "Book Antiqua", serif;
-  max-width: 20%;
+  width: 15%;
   height: calc(100% - 400px);
 }
 .soundContainer .flex-column {
@@ -10,19 +9,23 @@
 }
 .soundContainer h3 {
   color: #735646;
+  min-height: 5%;
+  min-width: 10%;
   padding: 5%;
   font-size: 4vmin;
-  background-color: rgba(251, 238, 224, 0.56);
+  background-color: rgba(251, 238, 224, 0.2);
   border-radius: 10px;
   font-weight: bold;
 }
 .soundContainer button {
   color: #f1a857;
-  padding: 4%;
+  margin-bottom: 3%;
+  padding: 5%;
   font-size: 3vmin;
-  border: 0;
-  background-color: rgba(251, 238, 224, 0.56);
+  border: 3px solid rgba(251, 238, 224, 0.77);
+  border-radius: 10px;
   font-weight: bold;
+  background-color: transparent;
 }
 .soundContainer button:focus:not(:focus-visible) {
   color: #735646;

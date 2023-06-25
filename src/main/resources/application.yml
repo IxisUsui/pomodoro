@@ -1,0 +1,9 @@
+spring:
+  h2:
+    console:
+      enabled: true
+      path: '/console'
+  datasource.url: 'jdbc:h2:file:C:/Users/User/Desktop/Pomodoro/Pomodoro/pomodoroDb'
+  jpa:
+    hibernate:
+      ddl-auto: validate
