@@ -8,6 +8,7 @@
 }
 .taskContainer .flex-column-task {
   display: flex;
+  padding-bottom: 3%;
 }
 .taskContainer h3 {
   color: #735646;
@@ -64,7 +65,7 @@
   stroke-dashoffset: 0;
 }
 .taskContainer .inputTask {
-  width: 90%;
+  width: 70%;
 }
 
 /*# sourceMappingURL=taskStyle.css.map */
