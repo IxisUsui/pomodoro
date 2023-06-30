@@ -75,7 +75,7 @@ const MainPage = () => {
                         }
 
                     <div className="titlePomodoro">
-                        <h5>PomodoroWithMe</h5>
+                        <h6>PomodoroWithMe</h6>
                         <p>by Ixis</p>
                     </div>
                 </div>

@@ -63,5 +63,8 @@
 .taskContainer .check:checked + label svg g path {
   stroke-dashoffset: 0;
 }
+.taskContainer .inputTask {
+  width: 90%;
+}
 
 /*# sourceMappingURL=taskStyle.css.map */

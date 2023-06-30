@@ -63,4 +63,8 @@
   .check:checked + label svg g path {
     stroke-dashoffset:0;
   }
+
+  .inputTask{
+    width: 90%
+  }
 }

@@ -4,7 +4,10 @@ const TaskCorner = () => {
     return (
         <div className="taskContainer">
             <div className="flex-column">
-                <h3>📋 Task corner</h3>
+                <div className="flex-column-task">
+                    <h3>📋 Task corner</h3>
+                    <button>+</button>
+                </div>
                 <div className="flex-column-task">
                     <div className="checkbox">
                         <input type="checkbox" className="check" id="check2"/>
@@ -19,7 +22,7 @@ const TaskCorner = () => {
                             </svg>
                         </label>
                     </div>
-                    <input></input>
+                    <input className="inputTask"></input>
                 </div>
             </div>
         </div>
