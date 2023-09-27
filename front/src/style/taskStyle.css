@@ -26,6 +26,16 @@
   font-weight: bold;
   text-align: left;
 }
+.taskContainer .inputTask {
+  font-family: "Book Antiqua", serif;
+  color: #735646;
+  font-size: 3vmin;
+  font-variant: small-caps;
+  font-weight: bold;
+}
+.taskContainer .inputTask.gray {
+  color: darkgray;
+}
 .taskContainer input {
   max-height: 80%;
   margin-top: 1%;

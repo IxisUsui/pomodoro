@@ -6,22 +6,25 @@ const TaskCorner = () => {
 
     }
 
-    const changeColor = () => {
-        console.log("grayish text");
+    const changeColor = (taskId: string) => {
+        let input = document.getElementById(taskId).getElementsByClassName("inputTask");
+        if(!input.item(0).classList.contains("gray")){
+            input.item(0).classList.add("gray")
+        } else {
+            input.item(0).classList.remove("gray")
+        }
     }
-
 
     return (
         <div className="taskContainer">
             <div className="flex-column">
-
                 <div className="flex-column-task">
                     <h3>📋 Task corner</h3>
                     <button className="buttonStyle">Save</button>
                 </div>
-                <div className="flex-column-task">
+                <div id="task1" className="flex-column-task">
                     <div className="checkbox">
-                        <input type="checkbox" className="check" id="check2" onClick={() => changeColor()}/>
+                        <input type="checkbox" className="check" id="check2" onClick={() => changeColor("task1")}/>
                         <label htmlFor="check2" className="label">
                             <svg width="50" height="50" viewBox="0 0 100 100">
                                 <rect x="30" y="20" width="50" height="50" stroke="black" fill="none"/>
@@ -33,11 +36,11 @@ const TaskCorner = () => {
                             </svg>
                         </label>
                     </div>
-                    <input id="task" className="inputTask"></input>
+                    <input className="inputTask"></input>
                 </div>
                 <div id="task2" className="flex-column-task">
                     <div className="checkbox">
-                        <input type="checkbox" className="check" id="check2"/>
+                        <input type="checkbox" className="check" id="check2" onClick={() => changeColor("task2")}/>
                         <label htmlFor="check2" className="label">
                             <svg width="50" height="50" viewBox="0 0 100 100">
                                 <rect x="30" y="20" width="50" height="50" stroke="black" fill="none"/>
@@ -53,7 +56,7 @@ const TaskCorner = () => {
                 </div>
                 <div id="task3" className="flex-column-task">
                     <div className="checkbox">
-                        <input type="checkbox" className="check" id="check2"/>
+                        <input type="checkbox" className="check" id="check2" onClick={() => changeColor("task3")}/>
                         <label htmlFor="check2" className="label">
                             <svg width="50" height="50" viewBox="0 0 100 100">
                                 <rect x="30" y="20" width="50" height="50" stroke="black" fill="none"/>
@@ -69,7 +72,7 @@ const TaskCorner = () => {
                 </div>
                 <div id="task4" className="flex-column-task">
                     <div className="checkbox">
-                        <input type="checkbox" className="check" id="check2"/>
+                        <input type="checkbox" className="check" id="check2" onClick={() => changeColor("task4")}/>
                         <label htmlFor="check2" className="label">
                             <svg width="50" height="50" viewBox="0 0 100 100">
                                 <rect x="30" y="20" width="50" height="50" stroke="black" fill="none"/>
@@ -85,7 +88,7 @@ const TaskCorner = () => {
                 </div>
                 <div id="task5" className="flex-column-task">
                     <div className="checkbox">
-                        <input type="checkbox" className="check" id="check2"/>
+                        <input type="checkbox" className="check" id="check2" onClick={() => changeColor("task5")}/>
                         <label htmlFor="check2" className="label">
                             <svg width="50" height="50" viewBox="0 0 100 100">
                                 <rect x="30" y="20" width="50" height="50" stroke="black" fill="none"/>
@@ -101,7 +104,7 @@ const TaskCorner = () => {
                 </div>
                 <div id="task6" className="flex-column-task">
                     <div className="checkbox">
-                        <input type="checkbox" className="check" id="check2"/>
+                        <input type="checkbox" className="check" id="check2" onClick={() => changeColor("task6")}/>
                         <label htmlFor="check2" className="label">
                             <svg width="50" height="50" viewBox="0 0 100 100">
                                 <rect x="30" y="20" width="50" height="50" stroke="black" fill="none"/>
@@ -117,7 +120,7 @@ const TaskCorner = () => {
                 </div>
                 <div id="task7" className="flex-column-task">
                     <div className="checkbox">
-                        <input type="checkbox" className="check" id="check2"/>
+                        <input type="checkbox" className="check" id="check2" onClick={() => changeColor("task7")}/>
                         <label htmlFor="check2" className="label">
                             <svg width="50" height="50" viewBox="0 0 100 100">
                                 <rect x="30" y="20" width="50" height="50" stroke="black" fill="none"/>

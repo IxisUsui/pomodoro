@@ -26,6 +26,17 @@
     font-weight: bold;
     text-align: left;
   }
+  .inputTask{
+    font-family: "Book Antiqua", serif;
+    color: #735646;
+    font-size: 3vmin;
+    font-variant: small-caps;
+    font-weight: bold;
+    &.gray{
+      color: darkgray;
+      //text-decoration: line-through; toDO: chce zrobić skreślenie
+    }
+  }
   input{
     max-height: 80%;
     margin-top: 1%;
