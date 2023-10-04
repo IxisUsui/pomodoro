@@ -2,6 +2,7 @@ import * as React from 'react'
 import "../style/timerStyle.css"
 import {useState} from "react";
 
+let timeForButton = 15;
 let timeInSeconds = 900; // default 15 min
 let intervalId;
 
@@ -18,6 +19,7 @@ const Timer = () => {
     }
 
     const timeManagement = (timeInMinutesFromButton) => {
+        timeForButton = timeInMinutesFromButton;
         timeInSeconds = timeInMinutesFromButton * 60;
         clearInterval(intervalId);
         intervalId = null;
@@ -32,6 +34,10 @@ const Timer = () => {
             let minutesStr = minutes < 10 ? '0' + minutes : minutes.toString();
             document.getElementById('timer').innerHTML = minutesStr + ":" + secondsStr;
             timeInSeconds--;
+            if(timeInSeconds === -1){
+                clearInterval(intervalId);
+                document.getElementById('timer').innerHTML =timeForButton.toString() + ":00";
+            }
         }, 1000);
 
         document.getElementById('stop').addEventListener('click', function () {
@@ -51,7 +57,7 @@ const Timer = () => {
             >Short</button>
             <button
                 className="buttonStyle"
-                onClick={() => timeManagement(5)}
+                onClick={() => timeManagement(1)}
             >Break</button>
             <button
                 className="buttonStyle"

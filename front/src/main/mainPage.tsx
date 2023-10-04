@@ -13,14 +13,27 @@ import TaskCorner from "../Components/taskCorner.tsx";
 const MainPage = () => {
     const [isSoundCornerActive, setIsSoundCornerActive] = useState<boolean>(true);
     const [isTaskCornerActive, setIsTaskCornerActive] = useState<boolean>(true);
-    const [isChatCornerActive, setIsChatCornerActive] = useState<boolean>(true);
+    const [isChatCornerActive, setIsChatCornerActive] = useState<boolean>(false);
 
     const displayCorner = (cornerName: string) => {
         let btn = document.getElementById(cornerName);
+
         if (btn.classList.contains("activeBtn")) {
             btn.classList.remove("activeBtn");
+            if(cornerName ==="chatCornerId" ){
+                document.getElementById("taskCornerId").classList.add("activeBtn");
+            }
+            if(cornerName ==="taskCornerId"){
+                document.getElementById("chatCornerId").classList.add("activeBtn");
+            }
         } else {
             btn.classList.add("activeBtn");
+            if(cornerName ==="chatCornerId" ){
+                document.getElementById("taskCornerId").classList.remove("activeBtn");
+            }
+            if(cornerName ==="taskCornerId"){
+                document.getElementById("chatCornerId").classList.remove("activeBtn");
+            }
         }
     }
     const soundCornerDisplay = () =>{
@@ -30,11 +43,13 @@ const MainPage = () => {
 
     const taskCornerDisplay = () =>{
         setIsTaskCornerActive(prevState => !prevState);
+        setIsChatCornerActive(prevState => !prevState);
         displayCorner("taskCornerId");
     }
 
     const chatCornerDisplay = () =>{
         setIsChatCornerActive(prevState => !prevState);
+        setIsTaskCornerActive(prevState => !prevState);
         displayCorner("chatCornerId");
     }
     const soundBarCornerDisplay = () =>{
@@ -45,7 +60,7 @@ const MainPage = () => {
         <div>
                 <div className="backgroundImage">
                     <div className="topBar">
-                        <button className="buttonStyle"
+                        <button className="buttonStyle activeBtn"
                                 id="chatCornerId"
                                 onClick={chatCornerDisplay}>Chat corner</button>
                         <button className="buttonStyle"
@@ -63,6 +78,9 @@ const MainPage = () => {
                 <div className="flexParent">
                     {isTaskCornerActive &&
                         <TaskCorner></TaskCorner>
+                    }
+                    {isChatCornerActive &&
+                        <SoundCorner></SoundCorner>
                     }
 
                     <div className="timerPomodoro">

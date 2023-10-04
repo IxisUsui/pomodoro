@@ -8,6 +8,7 @@
 }
 .taskContainer .flex-column-task {
   display: flex;
+  padding-bottom: 3%;
 }
 .taskContainer h3 {
   color: #735646;
@@ -24,6 +25,16 @@
   font-size: 4vmin;
   font-weight: bold;
   text-align: left;
+}
+.taskContainer .inputTask {
+  font-family: "Courier New", monospace;
+  color: #735646;
+  font-size: 3vmin;
+  font-variant: small-caps;
+  font-weight: bold;
+}
+.taskContainer .inputTask.gray {
+  color: darkgray;
 }
 .taskContainer input {
   max-height: 80%;
@@ -64,7 +75,40 @@
   stroke-dashoffset: 0;
 }
 .taskContainer .inputTask {
-  width: 90%;
+  width: 70%;
+}
+.taskContainer .buttonStyle {
+  font-family: "Book Antiqua", serif;
+  background-color: #fbeee0;
+  border: 1px solid #735646;
+  border-radius: 30px;
+  box-shadow: #735646 2px 2px 0 0;
+  color: #735646;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1vmax;
+  padding: 0 1px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.taskContainer .buttonStyle:hover {
+  background-color: #fff;
+}
+.taskContainer .buttonStyle:active {
+  box-shadow: #735646 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+@media (min-width: 768px) {
+  .taskContainer .buttonStyle {
+    min-width: 50px;
+    max-height: 40px;
+    margin-top: 10px;
+    padding: 0 1vmax;
+  }
 }
 
 /*# sourceMappingURL=taskStyle.css.map */
