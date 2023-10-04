@@ -27,7 +27,7 @@
   text-align: left;
 }
 .taskContainer .inputTask {
-  font-family: "Book Antiqua", serif;
+  font-family: "Courier New", monospace;
   color: #735646;
   font-size: 3vmin;
   font-variant: small-caps;
