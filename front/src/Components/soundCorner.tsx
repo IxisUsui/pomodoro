@@ -1,5 +1,6 @@
 import * as React from 'react'
 import "../style/soundStyle.css";
+
 const SoundCorner = () => {
     return (
         <div className="soundContainer">

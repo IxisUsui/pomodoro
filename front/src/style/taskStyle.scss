@@ -1,15 +1,18 @@
-.taskContainer{
+.taskContainer {
   width: 25%;
   margin: 5% 3% 15%;
   font-family: "Book Antiqua", serif;
-  .flex-column{
+
+  .flex-column {
     display: grid;
   }
-  .flex-column-task{
+
+  .flex-column-task {
     display: flex;
     padding-bottom: 3%;
   }
-  h3{
+
+  h3 {
     color: #735646;
     min-height: 5%;
     padding: 3%;
@@ -18,7 +21,7 @@
     text-align: left;
   }
 
-  h2{
+  h2 {
     color: #735646;
     min-height: 5%;
     padding-left: 5%;
@@ -26,61 +29,71 @@
     font-weight: bold;
     text-align: left;
   }
-  .inputTask{
+
+  .inputTask {
     font-family: "Courier New", monospace;
     color: #735646;
     font-size: 3vmin;
     font-variant: small-caps;
     font-weight: bold;
-    &.gray{
+
+    &.gray {
       color: darkgray;
       //text-decoration: line-through; toDO: chce zrobić skreślenie
     }
   }
-  input{
+
+  input {
     max-height: 80%;
     margin-top: 1%;
-    border:0;
-    border-bottom:1px solid;
-  }
-  input:focus{
-    border:none;
-    outline:none;
-    border-bottom:1px solid #e74c3c;
-  }
-  .checkbox {
-    width:15%;
-    height:40px;
-    overflow:hidden;
-    text-align: left;
-  }
-  .checkbox:not(:last-child){
-    border-bottom:2px solid white;
-  }
-  .check {
-    width:50px;
-    height:50px;
-    position: absolute;
-    opacity:0;
-  }
-  .label span {
-    position:absolute;
-    margin-top:15px;
-  }
-  .path1{
-    stroke-dasharray:400;
-    stroke-dashoffset:400;
-    transition:.5s all;
-  }
-  .check:checked + label svg g path {
-    stroke-dashoffset:0;
+    border: 0;
+    border-bottom: 1px solid;
   }
 
-  .inputTask{
+  input:focus {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #e74c3c;
+  }
+
+  .checkbox {
+    width: 15%;
+    height: 40px;
+    overflow: hidden;
+    text-align: left;
+  }
+
+  .checkbox:not(:last-child) {
+    border-bottom: 2px solid white;
+  }
+
+  .check {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    opacity: 0;
+  }
+
+  .label span {
+    position: absolute;
+    margin-top: 15px;
+  }
+
+  .path1 {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    transition: .5s all;
+  }
+
+  .check:checked + label svg g path {
+    stroke-dashoffset: 0;
+  }
+
+  .inputTask {
     width: 70%
   }
 
-  .buttonStyle{
+  .buttonStyle {
     font-family: "Book Antiqua", serif;
     background-color: #fbeee0;
     border: 1px solid #735646;

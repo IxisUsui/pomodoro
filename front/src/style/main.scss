@@ -3,9 +3,7 @@ body, html {
 }
 
 
-
-
-.backgroundImage{
+.backgroundImage {
   background-image: url("https://marketplace.canva.com/EAFMZO25Fds/1/0/1600w/canva-green-playful-frog-desktop-wallpaper-0uuRld0-IIg.jpg");
   background-size: cover;
   background-position: center;
@@ -17,7 +15,7 @@ body, html {
 }
 
 
-.buttonStyle{
+.buttonStyle {
   font-family: "Book Antiqua", serif;
   background-color: #fbeee0;
   border: 2px solid #735646;
@@ -58,21 +56,22 @@ body, html {
   background-color: rgba(251, 238, 224, 0.56);
 }
 
-.topBar{
+.topBar {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-around;
   margin: 1% 10% 0;
-    .settings {
-      background-color: rgba(0, 0, 0, 0);
-      border: 0;
-      font-size: 20px;
-      margin-right: 1%;
-      right: 0;
-      position: fixed;
-      color: #735646;
-    }
+
+  .settings {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    font-size: 20px;
+    margin-right: 1%;
+    right: 0;
+    position: fixed;
+    color: #735646;
+  }
 
   //button:focus:not(:focus-visible) {
   //  color: rgba(115, 86, 70, 0.56);
@@ -83,7 +82,7 @@ body, html {
 }
 
 
-.titlePomodoro{
+.titlePomodoro {
   font-family: "Lucida Handwriting", serif;
   color: #f1a857;
   font-weight: lighter;
@@ -91,9 +90,9 @@ body, html {
   padding-right: 20px;
   position: fixed;
   bottom: 4%;
-  right:0;
+  right: 0;
 
-  p{;
+  p {;
     font-family: "Lucida Handwriting", serif;
     color: #735646;
     text-align: right;
@@ -102,56 +101,58 @@ body, html {
     position: fixed;
     padding-top: 3px;
     bottom: 0;
-    right:0;
+    right: 0;
   }
 }
-.flexParent{
+
+.flexParent {
   display: flex;
   flex-direction: row;
   height: 100%;
   width: 100%;
-  justify-content:center;
+  justify-content: center;
   gap: 30px;
-.timerPomodoro {
-  align-self: center;
-  position: center;
-  margin-top: 7%;
-  margin-bottom: 18%;
-  background-color: rgba(176, 189, 144, 0.25);
-  max-height: 60%;
-  max-width: 45%;
-  border-radius: 25px;
-  flex-grow: 3;
-  font-family: "Book Antiqua", serif;
-  color: #735646;
 
-  button {
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 5vmin;
-    margin: 15px;
-    flex-wrap: nowrap;
-  }
-
-  button:focus:not(:focus-visible) {
-    color: #5a8a64;
-    border: 1px #5a8a64 solid;
-    background-color: #cee9be;
-  }
-
-  h1 {
-    font-size: min(18vmax, 180px);
-    font-weight: bold;
+  .timerPomodoro {
+    align-self: center;
+    position: center;
+    margin-top: 7%;
+    margin-bottom: 18%;
+    background-color: rgba(176, 189, 144, 0.25);
+    max-height: 60%;
+    max-width: 45%;
+    border-radius: 25px;
+    flex-grow: 3;
     font-family: "Book Antiqua", serif;
-    margin: 0;
-  }
+    color: #735646;
 
-  p {
-    font-size: 20px;
-    color: #ceeacd;
-    font-family: "Lucida Calligraphy", serif;
+    button {
+      padding-left: 15px;
+      padding-right: 15px;
+      font-size: 5vmin;
+      margin: 15px;
+      flex-wrap: nowrap;
+    }
+
+    button:focus:not(:focus-visible) {
+      color: #5a8a64;
+      border: 1px #5a8a64 solid;
+      background-color: #cee9be;
+    }
+
+    h1 {
+      font-size: min(18vmax, 180px);
+      font-weight: bold;
+      font-family: "Book Antiqua", serif;
+      margin: 0;
+    }
+
+    p {
+      font-size: 20px;
+      color: #ceeacd;
+      font-family: "Lucida Calligraphy", serif;
+    }
   }
-}
 }
 
 

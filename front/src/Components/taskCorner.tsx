@@ -1,5 +1,6 @@
 import * as React from 'react'
 import "../style/taskStyle.css";
+
 const TaskCorner = () => {
 
     const addTask = () => {
@@ -8,7 +9,7 @@ const TaskCorner = () => {
 
     const changeColor = (taskId: string) => {
         let input = document.getElementById(taskId).getElementsByClassName("inputTask");
-        if(!input.item(0).classList.contains("gray")){
+        if (!input.item(0).classList.contains("gray")) {
             input.item(0).classList.add("gray")
         } else {
             input.item(0).classList.remove("gray")

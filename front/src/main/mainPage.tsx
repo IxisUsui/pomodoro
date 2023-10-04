@@ -20,60 +20,66 @@ const MainPage = () => {
 
         if (btn.classList.contains("activeBtn")) {
             btn.classList.remove("activeBtn");
-            if(cornerName ==="chatCornerId" ){
+            if (cornerName === "chatCornerId") {
                 document.getElementById("taskCornerId").classList.add("activeBtn");
             }
-            if(cornerName ==="taskCornerId"){
+            if (cornerName === "taskCornerId") {
                 document.getElementById("chatCornerId").classList.add("activeBtn");
             }
         } else {
             btn.classList.add("activeBtn");
-            if(cornerName ==="chatCornerId" ){
+            if (cornerName === "chatCornerId") {
                 document.getElementById("taskCornerId").classList.remove("activeBtn");
             }
-            if(cornerName ==="taskCornerId"){
+            if (cornerName === "taskCornerId") {
                 document.getElementById("chatCornerId").classList.remove("activeBtn");
             }
         }
     }
-    const soundCornerDisplay = () =>{
+    const soundCornerDisplay = () => {
         setIsSoundCornerActive(prevState => !prevState);
         displayCorner("soundCornerId");
     }
 
-    const taskCornerDisplay = () =>{
+    const taskCornerDisplay = () => {
         setIsTaskCornerActive(prevState => !prevState);
         setIsChatCornerActive(prevState => !prevState);
         displayCorner("taskCornerId");
     }
 
-    const chatCornerDisplay = () =>{
+    const chatCornerDisplay = () => {
         setIsChatCornerActive(prevState => !prevState);
         setIsTaskCornerActive(prevState => !prevState);
         displayCorner("chatCornerId");
     }
-    const soundBarCornerDisplay = () =>{
+    const soundBarCornerDisplay = () => {
     }
 
 
     return (
         <div>
-                <div className="backgroundImage">
-                    <div className="topBar">
-                        <button className="buttonStyle activeBtn"
-                                id="chatCornerId"
-                                onClick={chatCornerDisplay}>Chat corner</button>
-                        <button className="buttonStyle"
-                                id="taskCornerId"
-                                onClick={taskCornerDisplay}>Tasks corner</button>
-                        <button className="buttonStyle"
-                                id="soundBarCornerId"
-                                onClick={soundBarCornerDisplay}>Sound bar</button>
-                        <button className="buttonStyle"
-                                id="soundCornerId"
-                                onClick={soundCornerDisplay}> Sound corner</button>
-                        <button id="settings" className="settings"><pre>✦✦✦</pre>	</button>
-                    </div>
+            <div className="backgroundImage">
+                <div className="topBar">
+                    <button className="buttonStyle activeBtn"
+                            id="chatCornerId"
+                            onClick={chatCornerDisplay}>Chat corner
+                    </button>
+                    <button className="buttonStyle"
+                            id="taskCornerId"
+                            onClick={taskCornerDisplay}>Tasks corner
+                    </button>
+                    <button className="buttonStyle"
+                            id="soundBarCornerId"
+                            onClick={soundBarCornerDisplay}>Sound bar
+                    </button>
+                    <button className="buttonStyle"
+                            id="soundCornerId"
+                            onClick={soundCornerDisplay}> Sound corner
+                    </button>
+                    <button id="settings" className="settings">
+                        <pre>✦✦✦</pre>
+                    </button>
+                </div>
 
                 <div className="flexParent">
                     {isTaskCornerActive &&
@@ -88,9 +94,9 @@ const MainPage = () => {
                         <p id="lilText">Don't give up!</p>
                     </div>
 
-                        {isSoundCornerActive &&
-                            <SoundCorner></SoundCorner>
-                        }
+                    {isSoundCornerActive &&
+                        <SoundCorner></SoundCorner>
+                    }
 
                     <div className="titlePomodoro">
                         <h6>PomodoroWithMe</h6>
