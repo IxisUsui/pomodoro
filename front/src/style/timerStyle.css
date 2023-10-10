@@ -1,3 +1,50 @@
+.flexParent {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  gap: 30px;
+}
+.flexParent .timerPomodoro {
+  align-self: center;
+  position: center;
+  margin-top: 7%;
+  margin-bottom: 18%;
+  background-color: rgba(154, 123, 97, 0.63);
+  max-height: 60%;
+  max-width: 45%;
+  border-radius: 25px;
+  flex-grow: 3;
+  font-family: "Book Antiqua", serif;
+  color: #4d3228;
+}
+.flexParent .timerPomodoro button {
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 5vmin;
+  margin: 15px;
+  flex-wrap: nowrap;
+}
+.flexParent .timerPomodoro h1 {
+  font-size: min(18vmax, 180px);
+  font-weight: bold;
+  font-family: "Book Antiqua", serif;
+  margin: 0;
+}
+.flexParent .timerPomodoro p {
+  font-size: 3vmin;
+  color: #5d3b2f;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+}
 
+.darkMode .flexParent .timerPomodoro {
+  color: #282c34;
+  background-color: rgba(121, 119, 117, 0.59);
+}
+.darkMode .flexParent .timerPomodoro p {
+  color: #282c34;
+}
 
 /*# sourceMappingURL=timerStyle.css.map */
