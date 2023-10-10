@@ -20,13 +20,13 @@ public class TaskController {
     }
 
     @GetMapping(value = "/task/all")
-    public ResponseEntity<List<TaskEntity>> getAllTasks(){
+    public ResponseEntity<List<TaskEntity>> getAllTasks() {
         return ResponseEntity.ok(taskRepository.findAll());
     }
 
 
     @PostMapping(value = "/task/add")
-    public ResponseEntity<TaskEntity> saveTask(@RequestBody TaskEntity taskEntity){
+    public ResponseEntity<TaskEntity> saveTask(@RequestBody TaskEntity taskEntity) {
         return ResponseEntity.ok(taskRepository.save(taskEntity));
     }
 }

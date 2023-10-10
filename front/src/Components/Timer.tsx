@@ -13,7 +13,7 @@ const Timer = () => {
     const makePause = () => {
         setIsPaused(prevState => !prevState);
         document.getElementById("stop").innerHTML = isPaused ? "▶" : "⏸";
-        if(!isPaused){
+        if (!isPaused) {
             timerInterval();
         }
     }
@@ -26,17 +26,17 @@ const Timer = () => {
         timerInterval();
     }
 
-    const timerInterval =() => {
-        intervalId = setInterval(function() {
-            const  minutes = Math.floor( timeInSeconds / 60);
+    const timerInterval = () => {
+        intervalId = setInterval(function () {
+            const minutes = Math.floor(timeInSeconds / 60);
             let seconds = timeInSeconds % 60;
             let secondsStr = seconds < 10 ? '0' + seconds : seconds.toString();
             let minutesStr = minutes < 10 ? '0' + minutes : minutes.toString();
             document.getElementById('timer').innerHTML = minutesStr + ":" + secondsStr;
             timeInSeconds--;
-            if(timeInSeconds === -1){
+            if (timeInSeconds === -1) {
                 clearInterval(intervalId);
-                document.getElementById('timer').innerHTML =timeForButton.toString() + ":00";
+                document.getElementById('timer').innerHTML = timeForButton.toString() + ":00";
             }
         }, 1000);
 
@@ -48,22 +48,26 @@ const Timer = () => {
     return (
         <div className="timer">
             <button
-                className = "buttonStyle"
+                className="buttonStyle"
                 onClick={() => timeManagement(30)}
-                >Long</button>
+            >Long
+            </button>
             <button
                 className="buttonStyle"
                 onClick={() => timeManagement(15)}
-            >Short</button>
+            >Short
+            </button>
             <button
                 className="buttonStyle"
                 onClick={() => timeManagement(1)}
-            >Break</button>
+            >Break
+            </button>
             <button
                 className="buttonStyle"
                 id="stop"
                 onClick={() => makePause()
-            }>⏸</button>
+                }>▶
+            </button>
             <h1 id="timer">15:00</h1>
         </div>
     );

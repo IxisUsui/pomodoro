@@ -1,5 +1,6 @@
 import * as React from 'react'
 import "../style/taskStyle.css";
+
 const TaskCorner = () => {
 
     const addTask = () => {
@@ -8,7 +9,7 @@ const TaskCorner = () => {
 
     const changeColor = (taskId: string) => {
         let input = document.getElementById(taskId).getElementsByClassName("inputTask");
-        if(!input.item(0).classList.contains("gray")){
+        if (!input.item(0).classList.contains("gray")) {
             input.item(0).classList.add("gray")
         } else {
             input.item(0).classList.remove("gray")
@@ -19,8 +20,10 @@ const TaskCorner = () => {
         <div className="taskContainer">
             <div className="flex-column">
                 <div className="flex-column-task">
-                    <h3>📋 Task corner</h3>
+                    <h3>🗹 Task corner</h3>
+                    {/* toDo: save button for tasks
                     <button className="buttonStyle">Save</button>
+                    */}
                 </div>
                 <div id="task1" className="flex-column-task">
                     <div className="checkbox">

@@ -1,5 +1,4 @@
-
-import { combineReducers } from 'redux'
+import {combineReducers} from 'redux'
 
 const timeReducer = (state = [], action) => {
     switch (action.type) {
@@ -10,7 +9,8 @@ const timeReducer = (state = [], action) => {
                 break: action.payload.break
             }];
 
-        default: return state;
+        default:
+            return state;
     }
 }
 

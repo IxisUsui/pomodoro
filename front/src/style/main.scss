@@ -3,10 +3,8 @@ body, html {
 }
 
 
-
-
-.backgroundImage{
-  background-image: url("https://marketplace.canva.com/EAFMZO25Fds/1/0/1600w/canva-green-playful-frog-desktop-wallpaper-0uuRld0-IIg.jpg");
+.backgroundImage {
+  background-image: url("https://images.unsplash.com/photo-1626437513709-7ed95e5d0008?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -16,8 +14,7 @@ body, html {
   margin: 0;
 }
 
-
-.buttonStyle{
+.buttonStyle {
   font-family: "Book Antiqua", serif;
   background-color: #fbeee0;
   border: 2px solid #735646;
@@ -34,6 +31,29 @@ body, html {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+}
+.smallButtonStyle {
+  font-family: "Book Antiqua", serif;
+  background-color: #fbeee0;
+  border: 1px solid #735646;
+  border-radius: 20px;
+  box-shadow: #735646 4px 4px 0 0;
+  color: #735646;
+  cursor: pointer;
+  font-weight: 200;
+  font-size: 2vmin;
+  padding: 0 10px;
+  line-height: 10px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.smallButtonStyle:active {
+  box-shadow: #735646 2px 2px 0 0;
+  transform: translate(2px, 2px);
 }
 
 .buttonStyle:hover {
@@ -58,22 +78,22 @@ body, html {
   background-color: rgba(251, 238, 224, 0.56);
 }
 
-.topBar{
+.topBar {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-around;
   margin: 1% 10% 0;
-    .settings {
-      background-color: rgba(0, 0, 0, 0);
-      border: 0;
-      font-size: 20px;
-      margin-right: 1%;
-      right: 0;
-      position: fixed;
-      color: #735646;
-    }
 
+  .settings {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    font-size: 20px;
+    margin-right: 1%;
+    right: 0;
+    position: fixed;
+    color: #735646;
+  }
   //button:focus:not(:focus-visible) {
   //  color: rgba(115, 86, 70, 0.56);
   //  border: 1px rgba(115, 86, 70, 0.56) solid;
@@ -83,77 +103,91 @@ body, html {
 }
 
 
-.titlePomodoro{
+.titlePomodoro {
   font-family: "Lucida Handwriting", serif;
-  color: #f1a857;
-  font-weight: lighter;
+  color: #914d0e;
+  font-weight: 600;
   text-align: right;
   padding-right: 20px;
   position: fixed;
   bottom: 4%;
-  right:0;
+  right: 0;
 
-  p{;
-    font-family: "Lucida Handwriting", serif;
-    color: #735646;
-    text-align: right;
+  p {;
+    color: #5e331e;
+    font-weight: 400;
     padding-right: 20px;
     float: right;
     position: fixed;
     padding-top: 3px;
     bottom: 0;
-    right:0;
+    right: 0;
   }
 }
-.flexParent{
-  display: flex;
-  flex-direction: row;
-  height: 100%;
-  width: 100%;
-  justify-content:center;
-  gap: 30px;
-.timerPomodoro {
-  align-self: center;
-  position: center;
-  margin-top: 7%;
-  margin-bottom: 18%;
-  background-color: rgba(176, 189, 144, 0.25);
-  max-height: 60%;
-  max-width: 45%;
-  border-radius: 25px;
-  flex-grow: 3;
-  font-family: "Book Antiqua", serif;
-  color: #735646;
 
-  button {
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 5vmin;
-    margin: 15px;
-    flex-wrap: nowrap;
-  }
 
-  button:focus:not(:focus-visible) {
-    color: #5a8a64;
-    border: 1px #5a8a64 solid;
-    background-color: #cee9be;
-  }
 
-  h1 {
-    font-size: min(18vmax, 180px);
-    font-weight: bold;
-    font-family: "Book Antiqua", serif;
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+.darkMode {
+  .backgroundImage {
+    background-image: url("https://w0.peakpx.com/wallpaper/259/146/HD-wallpaper-dark-academia-dark-academia-stock-dark-academia-aesthetic.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    height: 100%;
+    width: 100%;
     margin: 0;
   }
 
-  p {
-    font-size: 20px;
-    color: #ceeacd;
-    font-family: "Lucida Calligraphy", serif;
-  }
-}
-}
+  .titlePomodoro {
+    color: rgb(75, 74, 74);
 
+    p {
+      color: rgba(65, 65, 65, 0.41);
+    }
+  }
+
+  .settings {
+    color: #282c34;
+  }
+
+  .buttonStyle {
+    background-color: #b2b2b2;
+    border: 2px solid rgb(54, 54, 54);
+    box-shadow: rgb(75, 74, 74) 4px 4px 0 0;
+    color: #4b4a4a;
+  }
+
+  .buttonStyle:active {
+    box-shadow: rgba(75, 74, 74, 0.34) 2px 2px 0 0;
+    transform: translate(2px, 2px);
+  }
+
+  .activeBtn {
+    color: rgb(58, 58, 58);
+    border: 1px  rgb(58, 58, 58) solid;
+    background-color: rgba(169, 175, 180, 0.56);
+    box-shadow: rgba(75, 74, 74, 0.74) 4px 4px 0 0;
+
+  }
+
+  .smallButtonStyle {
+    background-color: #b2b2b2;
+    border: 1px solid rgb(54, 54, 54);
+    box-shadow: rgb(75, 74, 74) 4px 4px 0 0;
+    color: #4b4a4a;
+  }
+
+  .smallButtonStyle:active {
+    box-shadow: #4b4a4a 2px 2px 0 0;
+  }
+
+
+}
 
 
 

@@ -11,12 +11,14 @@
   padding-bottom: 3%;
 }
 .taskContainer h3 {
-  color: #735646;
+  color: #694b3f;
   min-height: 5%;
   padding: 3%;
   font-size: 4vmin;
   font-weight: bold;
-  text-align: left;
+  background-color: rgba(251, 238, 224, 0.4);
+  border-radius: 10px;
+  margin-left: 3vmax;
 }
 .taskContainer h2 {
   color: #735646;
@@ -28,24 +30,26 @@
 }
 .taskContainer .inputTask {
   font-family: "Courier New", monospace;
-  color: #735646;
-  font-size: 3vmin;
+  color: #57392f;
+  font-size: min(2vmax, 3vmin);
   font-variant: small-caps;
   font-weight: bold;
 }
 .taskContainer .inputTask.gray {
-  color: darkgray;
+  color: rgba(182, 173, 173, 0.71);
+  background-color: rgba(31, 30, 30, 0.47);
 }
 .taskContainer input {
   max-height: 80%;
-  margin-top: 1%;
   border: 0;
-  border-bottom: 1px solid;
+  background-color: rgba(189, 170, 144, 0.5);
+  border-radius: 10px;
 }
 .taskContainer input:focus {
   border: none;
   outline: none;
-  border-bottom: 1px solid #e74c3c;
+  color: rgba(243, 193, 137, 0.65);
+  background-color: rgba(45, 45, 45, 0.41);
 }
 .taskContainer .checkbox {
   width: 15%;
@@ -54,11 +58,11 @@
   text-align: left;
 }
 .taskContainer .checkbox:not(:last-child) {
-  border-bottom: 2px solid white;
+  border-bottom: 0px solid white;
 }
 .taskContainer .check {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 30px;
   position: absolute;
   opacity: 0;
 }
@@ -109,6 +113,25 @@
     margin-top: 10px;
     padding: 0 1vmax;
   }
+}
+
+.darkMode h3 {
+  color: #2f2e2e;
+  background-color: rgba(121, 119, 117, 0.59);
+}
+.darkMode input {
+  background-color: rgb(75, 74, 74);
+}
+.darkMode .inputTask {
+  font-family: "Courier New", monospace;
+  color: #838080;
+  font-size: 3vmin;
+  font-variant: small-caps;
+  font-weight: bold;
+}
+.darkMode .inputTask.gray {
+  color: #333131;
+  background-color: rgba(31, 30, 30, 0.47);
 }
 
 /*# sourceMappingURL=taskStyle.css.map */
