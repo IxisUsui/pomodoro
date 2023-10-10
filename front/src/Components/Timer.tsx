@@ -66,7 +66,7 @@ const Timer = () => {
                 className="buttonStyle"
                 id="stop"
                 onClick={() => makePause()
-                }>⏸
+                }>▶
             </button>
             <h1 id="timer">15:00</h1>
         </div>

@@ -5,7 +5,7 @@ const SoundCorner = () => {
     return (
         <div className="soundContainer">
             <div className="flex-column">
-                <h3>Sound corner</h3>
+                <h3>♯ Sound corner</h3>
                 <button>🌫 Wind 🌫</button>
                 <button>🜂 Fire 🜂</button>
                 <button>🌧 Rain 🌧</button>

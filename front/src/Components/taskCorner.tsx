@@ -20,8 +20,10 @@ const TaskCorner = () => {
         <div className="taskContainer">
             <div className="flex-column">
                 <div className="flex-column-task">
-                    <h3>📋 Task corner</h3>
+                    <h3>🗹 Task corner</h3>
+                    {/* toDo: save button for tasks
                     <button className="buttonStyle">Save</button>
+                    */}
                 </div>
                 <div id="task1" className="flex-column-task">
                     <div className="checkbox">

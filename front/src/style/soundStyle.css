@@ -8,28 +8,43 @@
   display: grid;
 }
 .soundContainer h3 {
-  color: #735646;
+  color: #694b3f;
   min-height: 5%;
   min-width: 10%;
   padding: 5%;
   font-size: 4vmin;
-  background-color: rgba(251, 238, 224, 0.2);
+  background-color: rgba(251, 238, 224, 0.4);
   border-radius: 10px;
   font-weight: bold;
 }
 .soundContainer button {
-  color: #f1a857;
+  color: #57392f;
   margin-bottom: 3%;
-  padding: 5%;
-  font-size: 3vmin;
-  border: 3px solid rgba(251, 238, 224, 0.77);
+  padding: 2vmin;
+  font-size: min(2vmax, 3vmin);
+  border: 0;
   border-radius: 10px;
   font-weight: bold;
-  background-color: transparent;
+  background-color: rgba(189, 170, 144, 0.5);
 }
 .soundContainer button:focus:not(:focus-visible) {
-  color: #735646;
-  background-color: rgba(238, 251, 224, 0.56);
+  color: rgba(243, 193, 137, 0.65);
+  background-color: rgba(45, 45, 45, 0.41);
+}
+
+.darkMode .soundContainer h3 {
+  color: #2f2e2e;
+  background-color: rgba(121, 119, 117, 0.59);
+}
+.darkMode .soundContainer button {
+  color: #838080;
+  border-color: #4b4a4a;
+  background-color: rgba(51, 49, 49, 0.71);
+}
+.darkMode .soundContainer button:focus:not(:focus-visible) {
+  color: #4b4a4a;
+  background-color: rgba(148, 148, 148, 0);
+  border-color: #3a3939;
 }
 
 /*# sourceMappingURL=soundStyle.css.map */
