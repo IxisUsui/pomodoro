@@ -36,8 +36,9 @@
   font-weight: bold;
 }
 .taskContainer .inputTask.gray {
-  color: rgba(182, 173, 173, 0.71);
+  color: rgba(182, 173, 173, 0.62);
   background-color: rgba(31, 30, 30, 0.47);
+  text-decoration: line-through;
 }
 .taskContainer input {
   max-height: 80%;
@@ -130,7 +131,7 @@
   font-weight: bold;
 }
 .darkMode .inputTask.gray {
-  color: #333131;
+  color: #4d4a4a;
   background-color: rgba(31, 30, 30, 0.47);
 }
 

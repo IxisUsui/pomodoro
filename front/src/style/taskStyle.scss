@@ -40,9 +40,9 @@
     font-weight: bold;
 
     &.gray {
-      color: rgba(182, 173, 173, 0.71);
+      color: rgba(182, 173, 173, 0.62);
       background-color: rgba(31, 30, 30, 0.47);
-      //text-decoration: line-through; toDO: chce zrobić skreślenie
+      text-decoration: line-through;
     }
   }
 
@@ -152,9 +152,8 @@
     font-weight: bold;
 
     &.gray {
-      color: #333131;
+      color: #4d4a4a;
       background-color: rgba(31, 30, 30, 0.47);
-      //text-decoration: line-through; toDO: chce zrobić skreślenie
     }
   }
 }
