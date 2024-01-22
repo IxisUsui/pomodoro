@@ -1,4 +1,4 @@
-# Pomodoro Timer
+# Pomodoro & Flowmodoro Timer
 
 ![Pomodoro Timer Logo](link-to-your-logo-image)
 
@@ -15,6 +15,7 @@ The Pomodoro Timer is a productivity application that utilizes the Pomodoro Tech
 ## Features
 
 - **Pomodoro Technique**: Utilizes the Pomodoro Technique with customizable work and break intervals.
+- **Flowmodoro Technique**: Utilizes the Flowmodoro Technique with customizable work and break intervals.
 - **User Authentication**: Allows users to register and log in to track their productivity.
 - **Task Management**: Enables users to create and manage tasks within Pomodoro sessions.
 - **Progress Tracking**: Displays statistics and progress on completed tasks and sessions.
