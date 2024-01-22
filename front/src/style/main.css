@@ -82,7 +82,7 @@ body, html {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-around;
-  margin: 1% 10% 0;
+  margin: 1% 7% 0;
 }
 .topBar .settings {
   background-color: rgba(0, 0, 0, 0);

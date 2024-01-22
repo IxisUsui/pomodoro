@@ -7,7 +7,7 @@ let timeInSeconds = 900; // default 15 min
 let intervalId;
 
 
-const Timer = () => {
+const PomodoroTimer = () => {
     const [isPaused, setIsPaused] = useState<boolean>(false);
 
     const makePause = () => {
@@ -73,4 +73,4 @@ const Timer = () => {
     );
 };
 
-export default Timer;
+export default PomodoroTimer;

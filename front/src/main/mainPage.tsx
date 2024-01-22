@@ -2,20 +2,20 @@ import * as React from 'react'
 import "../style/main.css";
 import "../style/timerStyle.css";
 
-// @ts-ignore
-import ChatCorner from "../Components/chatCorner.tsx";
-import {useState} from "react";
+import { useState } from "react";
 // @ts-ignore
 import SoundCorner from "../Components/soundCorner.tsx";
 // @ts-ignore
-import Timer from "../Components/Timer.tsx";
+import PomodoroTimer from "../Components/PomodoroTimer.tsx";
+// @ts-ignore
+import FlowmodoroTimer from "../Components/FlowmodoroTimer.tsx";
 // @ts-ignore
 import TaskCorner from "../Components/taskCorner.tsx";
 
 const MainPage = () => {
     const [isSoundCornerActive, setIsSoundCornerActive] = useState<boolean>(true);
     const [isTaskCornerActive, setIsTaskCornerActive] = useState<boolean>(true);
-    const [isChatCornerActive, setIsChatCornerActive] = useState<boolean>(false);
+    const [isPomodoroActive, setIsPomodoroActive] = useState<boolean>(true);
     const [isDarkModeActive, setIsDarkModeActive] = useState<boolean>(true);
 
 
@@ -24,20 +24,8 @@ const MainPage = () => {
 
         if (btn.classList.contains("activeBtn")) {
             btn.classList.remove("activeBtn");
-            if (cornerName === "chatCornerId") {
-                document.getElementById("taskCornerId").classList.add("activeBtn");
-            }
-            if (cornerName === "taskCornerId") {
-                document.getElementById("chatCornerId").classList.add("activeBtn");
-            }
         } else {
             btn.classList.add("activeBtn");
-            if (cornerName === "chatCornerId") {
-                document.getElementById("taskCornerId").classList.remove("activeBtn");
-            }
-            if (cornerName === "taskCornerId") {
-                document.getElementById("chatCornerId").classList.remove("activeBtn");
-            }
         }
     }
     const soundCornerDisplay = () => {
@@ -47,14 +35,16 @@ const MainPage = () => {
 
     const taskCornerDisplay = () => {
         setIsTaskCornerActive(prevState => !prevState);
-        setIsChatCornerActive(prevState => !prevState);
         displayCorner("taskCornerId");
     }
 
-    const chatCornerDisplay = () => {
-        setIsChatCornerActive(prevState => !prevState);
-        setIsTaskCornerActive(prevState => !prevState);
-        displayCorner("chatCornerId");
+    const changeTypeOfFocusClock = () => {
+        if(!isPomodoroActive){
+            document.getElementById("modoroId").innerHTML = "Flowmodoro";
+        } else {
+            document.getElementById("modoroId").innerHTML = "Pomodoro";
+        }
+        setIsPomodoroActive(prevState => !prevState)
     }
     const soundBarCornerDisplay = () => {
     }
@@ -81,23 +71,23 @@ const MainPage = () => {
                             onClick={darkModeChange}
                     >👻
                     </button>
-                    <button className="buttonStyle activeBtn"
-                            id="chatCornerId"
-                            onClick={chatCornerDisplay}>Chat corner
+                    <button className="buttonStyle"
+                            style={{marginRight: '120px'}}
+                            id="modoroId"
+                            onClick={changeTypeOfFocusClock}>Flowmodoro
                     </button>
                     <button className="buttonStyle"
                             id="taskCornerId"
                             onClick={taskCornerDisplay}>Tasks corner
                     </button>
                     <button className="buttonStyle"
-                            id="soundBarCornerId"
-                            onClick={soundBarCornerDisplay}>Sound bar
-                    </button>
-                    <button className="buttonStyle"
                             id="soundCornerId"
                             onClick={soundCornerDisplay}> Sound corner
                     </button>
-
+                    <button className="buttonStyle"
+                            id="soundBarCornerId"
+                            onClick={soundBarCornerDisplay}>Sound bar
+                    </button>
                     <button id="settings" className="settings">
                         <pre>✦✦✦</pre>
                     </button>
@@ -107,13 +97,16 @@ const MainPage = () => {
                     {isTaskCornerActive &&
                         <TaskCorner></TaskCorner>
                     }
-                    {isChatCornerActive &&
-                        <SoundCorner></SoundCorner>
+                    {isPomodoroActive &&
+                        <div className="timerPomodoro">
+                            <PomodoroTimer></PomodoroTimer>
+                        </div>
                     }
-
-                    <div className="timerPomodoro">
-                        <Timer></Timer>
-                    </div>
+                    {!isPomodoroActive &&
+                        <div className="timerFlowmodoro">
+                            <FlowmodoroTimer></FlowmodoroTimer>
+                        </div>
+                    }
 
                     {isSoundCornerActive &&
                         <SoundCorner></SoundCorner>
