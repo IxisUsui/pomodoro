@@ -1,6 +1,6 @@
 # Pomodoro & Flowmodoro Timer
 
-![Pomodoro Timer Logo](link-to-your-logo-image)
+
 
 ## Overview
 
